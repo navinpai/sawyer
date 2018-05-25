@@ -16,7 +16,7 @@ eg. iter(str_var)
 
 ```py
 (ifFalse, ifTrue)[test] # Alternate ternary operator
-eg. fitness = ("skinny","fat")[fat]
+eg. fat = True; fitness = ("skinny","fat")[fat]
 ```
 
 #### Classes
