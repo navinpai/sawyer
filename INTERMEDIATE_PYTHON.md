@@ -25,7 +25,7 @@ eg. fat = True; fitness = ("skinny","fat")[fat]
 class MyClass(object):
     # Tell Python not to use a dict, and only allocate 
     # space for a fixed set of attributes
-    __slots__ = [ô°nameô°, ô°identifier]
+    __slots__ = ["name", "identifier"]
     def __init__(name, identifier):
         self.name = name
         self.identifier = identifier
@@ -43,12 +43,12 @@ for c, value in enumerate(my_list, 1):
 #### Dict Comprehensions
 
 ```py
-mcase = {ô°aô°: 10, ô°bô°: 34, ô°Aô°: 7, ô°Zô°: 3}
+mcase = {"a": 10, "b": 34, "A": 7, "Z": 3}
 mcase_frequency = {
     k.lower(): mcase.get(k.lower(), 0) + mcase.get(k.upper(), 0) 
     for k in mcase.keys()
 }
-# mcase_frequency == {ô°aô°: 17, ô°zô°: 3, ô°bô°: 34}
+# mcase_frequency == {"a": 17, "z": 3, "b": 34}
 ```
 
 #### For/Else
@@ -60,7 +60,7 @@ for item in container:
         process(item)
         break 
 else: # Executes when for ends normally
-    # Didnô°t find anything..
+    # Didn't find anything..
     not_found_in_container()
 ```
 
@@ -78,7 +78,7 @@ search = grep('coroutine') # We want to search for coroutine
 search.next() # Start the coroutine
 # Output: Searching for coroutine
 search.send("I love you")
-search.send("Donô°t you love me?")
+search.send("Don't you love me?")
 search.send("I love coroutines instead!")
 # Output: I love coroutines instead!
 search.close() # Stops the coroutine
